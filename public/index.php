@@ -6,6 +6,7 @@ use \Slim\App;
 use \Slim\Container;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use \Psr7Middlewares\Middleware\TrailingSlash;
 
 use JumpApp\Router\ApiRouter;
 
@@ -24,6 +25,7 @@ $container['notFoundHandler'] = function($c) {
 };
 
 $app = new App($container);
+$app->add(new TrailingSlash(true));
 $router = new ApiRouter();
 
 // API routes
