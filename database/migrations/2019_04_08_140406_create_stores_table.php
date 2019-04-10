@@ -12,4 +12,5 @@ Capsule::schema()->create('stores', function (Blueprint $table) {
     $table->double('latitude', 10, 8);
     $table->double('longitude', 10, 8);
     $table->timestamps();
+    $table->softDeletes();
 });

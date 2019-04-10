@@ -11,4 +11,5 @@ Capsule::schema()->create('products', function (Blueprint $table) {
     $table->string('name', 64);
     $table->text('description');
     $table->timestamps();
+    $table->softDeletes();
 });

@@ -12,4 +12,5 @@ Capsule::schema()->create('users', function (Blueprint $table) {
     $table->string('password');
     $table->rememberToken();
     $table->timestamps();
+    $table->softDeletes();
 });

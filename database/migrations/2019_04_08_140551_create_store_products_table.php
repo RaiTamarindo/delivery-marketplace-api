@@ -10,4 +10,5 @@ Capsule::schema()->create('store_products', function (Blueprint $table) {
     $table->decimal('price', 10, 2);
     $table->boolean('is_available');
     $table->timestamps();
+    $table->softDeletes();
 });
