@@ -18,10 +18,8 @@ class ApiRouter implements IRouter {
      */
     public function apply(App $app) {
         $productRouter = new ProductRouter();
-        $global = new GlobalRouter();
         $app->group('/api', function() use ($productRouter) {
             $productRouter->apply($this);
-            $global->apply($this);
         });
     }
 
