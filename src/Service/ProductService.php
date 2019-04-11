@@ -6,6 +6,14 @@ use JumpApp\Product;
 
 class ProductService extends ResourceService {
 
+    private $addressService;
+    private $routeService;
+
+    public function __construct() {
+        $this->addressService = new AddressService();
+        $this->routeService = new RouteService();
+    }
+
     public function findByFilter($filter) {
         $query = Product::with('stores.store')
             ->where($this->getConditions($filter));
@@ -15,10 +23,13 @@ class ProductService extends ResourceService {
                 ->skip($filter['page'] * $filter['limit'])
                 ->take($filter['limit']);
         }
-        $resources = $query->get();
+        $products = $query->get();
+        if (isset($filter['address'])) {
+            $this->loadDistancesToStores($filter['address'], $products);
+        }
 
         return [
-            'data' => $resources,
+            'data' => $products,
             'filter' => $filter,
             'total' => $total,
         ];
@@ -38,6 +49,32 @@ class ProductService extends ResourceService {
         }
 
         return $conditions;
+    }
+
+    private function loadDistancesToStores($addressId, $products) {
+        $storesDistances = array();
+        foreach ($products as $product) {
+            foreach ($product->stores as $storeProduct) {
+                $storesDistances[$storeProduct->store->id] = 0;
+            }
+        }
+        $storeIds = \array_keys($storesDistances);
+        $address = $this->addressService->findByIdWithRoutesTo($addressId, $storeIds);
+        foreach ($address->routes as $route) {
+            $storesDistances[$route->store_id] = $route->distance;
+        }
+        foreach ($products as $product) {
+            foreach ($product->stores as $storeProduct) {
+                if ($storesDistances[$storeProduct->store->id] > 0) {
+                    $storeProduct->distance = $storesDistances[$storeProduct->store->id];
+                } else {
+                    $route = $this->routeService
+                        ->createStraightLineRoute($address, $storeProduct->store);
+                    $storeProduct->distance = $route->distance;
+                    $storesDistances[$storeProduct->store->id] = $route->distance;
+                }
+            }
+        }
     }
 
 }

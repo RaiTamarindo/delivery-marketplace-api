@@ -6,6 +6,12 @@ use JumpApp\Address;
 
 class AddressService extends ResourceService {
 
+    public function findByIdWithRoutesTo($id, $storeIds) {
+        return $this->getModel()::with([ 'routes' => function ($query) use ($storeIds) {
+            $query->whereIn('store_id', $storeIds);
+        }])->find($id);
+    }
+
     protected function getModel() {
         return Address::class;
     }
