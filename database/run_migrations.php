@@ -30,10 +30,7 @@ if ($count_migrations) {
     
     file_put_contents($breakpoint_filepath, $breakpoint);
 }
-if ($migrations_done == 0) {
-    echo 'All migrations are already done!' . PHP_EOL;
-} else {
-    echo 'Migrations done: ' . $migrations_done . PHP_EOL;
-}
+
+echo 'Migrations done: ' . $migrations_done . PHP_EOL;
 
 ?>
