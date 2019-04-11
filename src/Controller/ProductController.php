@@ -2,9 +2,24 @@
 
 namespace JumpApp\Controller;
 
-use Slim\Http\Request;
-use Slim\Http\Response;
+use JumpApp\Product;
 
-class ProductController {
+class ProductController extends ResourceController {
+
+    protected function getModel() {
+        return Product::class;
+    }
+
+    protected function getConditions($filter) {
+        $conditions = array();
+        if (isset($filter['barcode'])) {
+            \array_push($conditions, [ 'barcode', '=', $filter['barcode'] ]);
+        }
+        if (isset($filter['name'])) {
+            \array_push($conditions, [ 'name', 'like', $filter['name'] . '%' ]);
+        }
+
+        return $conditions;
+    }
 
 }

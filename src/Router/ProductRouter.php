@@ -9,21 +9,10 @@ use JumpApp\Controller\ProductController;
 /**
  * Product routes
  */
-class ProductRouter implements IRouter {
+class ProductRouter extends ResourceRouter {
 
-        
-    /**
-     * Defines all product routes
-     *
-     * @param  \Slim\App $app
-     * @return void
-     */
-    public function apply(App $app) {
-        $app->group('/products', function() {
-            
-            // TODO
-
-        });
+    public function __construct() {
+        parent::__construct('products', ProductController::class);
     }
 
 }
