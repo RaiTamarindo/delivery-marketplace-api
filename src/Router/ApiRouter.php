@@ -21,6 +21,7 @@ class ApiRouter implements IRouter {
             new UserRouter(),
             new ProductRouter(),
             new StoreRouter(),
+            new StoreProductRouter(),
         );
         $app->group('/api', function() use ($routers) {
             foreach($routers as $router) {
