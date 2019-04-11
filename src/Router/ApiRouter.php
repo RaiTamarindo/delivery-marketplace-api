@@ -18,6 +18,7 @@ class ApiRouter implements IRouter {
      */
     public function apply(App $app) {
         $routers = array(
+            new AddressRouter(),
             new UserRouter(),
             new ProductRouter(),
             new StoreRouter(),
