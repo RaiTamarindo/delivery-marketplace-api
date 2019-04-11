@@ -43,7 +43,8 @@ abstract class ResourceService {
         unset($filter['page']);
         unset($filter['limit']);
 
-        return $this->findByFilter($filter)['data'];
+        return $this->getModel()::where($this->getConditions($filter))
+            ->get();
     }
 
     /**
