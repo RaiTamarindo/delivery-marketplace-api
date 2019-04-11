@@ -15,7 +15,7 @@ class StoreService extends ResourceService {
             unset($data['user']);
             $store->fill($data);
             $store['user_id'] = $user->id;
-            $store->save($store);
+            $store->save();
         } else {
             throw new ApiException('This user does not exist', 404);
         }
