@@ -17,9 +17,14 @@ class ApiRouter implements IRouter {
      * @return void
      */
     public function apply(App $app) {
-        $productRouter = new ProductRouter();
-        $app->group('/api', function() use ($productRouter) {
-            $productRouter->apply($this);
+        $routers = array(
+            new UserRouter(),
+            new ProductRouter(),
+        );
+        $app->group('/api', function() use ($routers) {
+            foreach($routers as $router) {
+                $router->apply($this);
+            }
         });
     }
 
