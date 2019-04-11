@@ -25,6 +25,7 @@ There is other linking table between *products* and *stores* that keeps price an
  - [x] Routers
  - [ ] Data validation middlewares
  - [ ] Authentication middleware
+ - [ ] User constraints
  - [x] Custom product search endpoint
  - [ ] Frontend app
 
