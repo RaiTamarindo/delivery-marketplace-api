@@ -15,7 +15,7 @@ $migrations_done = 0;
 if ($count_migrations) {
     foreach ($migration_files as $filename) {
         $path = $migrations_path . '/' . $filename;
-        $migration_time = substr($filename, 0, 16);
+        $migration_time = substr($filename, 0, 17);
         if (is_file($path) && strcmp($migration_time, $breakpoint) > 0) {
             echo $filename . PHP_EOL;
             try {
