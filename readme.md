@@ -6,9 +6,9 @@ An API that handles with stores, products and routes to deliver to the clients.
 
 This API was built in PHP using a microframework called **Slim** for routing and creating middlewares.
 
-For ORM was choosed **Eloquent** ORM, the same in Laravel framework. I have prefer avoid using Laravel because it's a fullstack framework, that is, it would bring too much things that a **RESTful** API doesn't needs (things like Cookies and Session management, login pages, any sort of frontend stuff, etc).
+For ORM was choosed **Eloquent** ORM, the same in Laravel framework. I have prefer avoid using Laravel because it's a fullstack framework, that is, it would bring too much things that a **RESTful** API doesn't needs at all (things like Cookies and Session management, login pages, any sort of frontend stuff, etc).
 
-All dependencies are managed by **Composer**, which allows you to create deploy automation scripts using Docker, for example.
+All dependencies are managed by **Composer**, which allows you to create deployment automation scripts using Docker, for example.
 
 It was developed generic classes for services, controllers and routers with common code to handle CRUD operation through a REST interface.
 
