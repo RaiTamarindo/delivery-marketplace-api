@@ -20,6 +20,7 @@ class ApiRouter implements IRouter {
         $routers = array(
             new UserRouter(),
             new ProductRouter(),
+            new StoreRouter(),
         );
         $app->group('/api', function() use ($routers) {
             foreach($routers as $router) {

@@ -26,4 +26,8 @@ class User extends Model
     protected $hidden = [
         'password'
     ];
+
+    public function store() {
+        return $this->hasOne('JumpApp\Store');
+    }
 }
