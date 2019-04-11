@@ -6,7 +6,8 @@ use \Slim\App;
 use \Slim\Container;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-use \Psr7Middlewares\Middleware\TrailingSlash;
+use \Middlewares\Utils\Dispatcher;
+use \Middlewares\TrailingSlash;
 
 use JumpApp\Router\ApiRouter;
 use JumpApp\ApiException;
@@ -33,7 +34,13 @@ $container['errorHandler'] = function($c) {
 };
 
 $app = new App($container);
-$app->add(new TrailingSlash(false));
+$app->add(function (Request $req, Response $res, callable $next) {
+    $dispatcher = new Dispatcher([
+        (new Middlewares\TrailingSlash(false))->redirect()
+    ]);
+    
+    return $next($req, $dispatcher->dispatch($req));
+});
 $router = new ApiRouter();
 
 // API routes

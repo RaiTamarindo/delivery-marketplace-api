@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2769794ffcf9c8caa97c6c3ba8d6890",
+    "content-hash": "bfa028e436e0d411c47aa363323738c6",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -315,6 +315,105 @@
             "time": "2019-04-01T19:02:05+00:00"
         },
         {
+            "name": "middlewares/trailing-slash",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/middlewares/trailing-slash.git",
+                "reference": "b0beed466bc0ac7b9ff87a2a06ab74ce793e9d76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/middlewares/trailing-slash/zipball/b0beed466bc0ac7b9ff87a2a06ab74ce793e9d76",
+                "reference": "b0beed466bc0ac7b9ff87a2a06ab74ce793e9d76",
+                "shasum": ""
+            },
+            "require": {
+                "middlewares/utils": "^2.1",
+                "php": "^7.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "^6.0|^7.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Middlewares\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Middleware to normalize the trailing slash of the uri path",
+            "homepage": "https://github.com/middlewares/trailing-slash",
+            "keywords": [
+                "http",
+                "middleware",
+                "normalize",
+                "path",
+                "psr-15",
+                "psr-7",
+                "slash"
+            ],
+            "time": "2018-08-04T10:41:55+00:00"
+        },
+        {
+            "name": "middlewares/utils",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/middlewares/utils.git",
+                "reference": "7dc49454b4fbf249226023c7b77658b6068abfbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/middlewares/utils/zipball/7dc49454b4fbf249226023c7b77658b6068abfbc",
+                "reference": "7dc49454b4fbf249226023c7b77658b6068abfbc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "psr/container": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "guzzlehttp/psr7": "^1.3",
+                "phpunit/phpunit": "^6.0|^7.0",
+                "slim/http": "^0.3",
+                "squizlabs/php_codesniffer": "^3.0",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Middlewares\\Utils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Common utils to create PSR-15 middleware packages",
+            "homepage": "https://github.com/middlewares/utils",
+            "keywords": [
+                "PSR-11",
+                "http",
+                "middleware",
+                "psr-15",
+                "psr-17",
+                "psr-7"
+            ],
+            "time": "2019-03-05T22:06:37+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.16.3",
             "source": {
@@ -419,104 +518,6 @@
                 "routing"
             ],
             "time": "2018-02-13T20:26:39+00:00"
-        },
-        {
-            "name": "oscarotero/psr7-middlewares",
-            "version": "v3.21.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oscarotero/psr7-middlewares.git",
-                "reference": "639c87ddf9647224b9d3f93899276cc25a7a1aa9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/639c87ddf9647224b9d3f93899276cc25a7a1aa9",
-                "reference": "639c87ddf9647224b9d3f93899276cc25a7a1aa9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "aura/router": "^3.0",
-                "aura/session": "2.*",
-                "ext-mcrypt": "*",
-                "filp/whoops": "2.*",
-                "friendsofphp/php-cs-fixer": "^1.12",
-                "google/recaptcha": "^1.1",
-                "imagecow/imagecow": "^2.0",
-                "justinrainbow/json-schema": ">=3.0",
-                "league/route": "^2.0",
-                "m6web/firewall": "~1.0",
-                "matthiasmullie/scrapbook": "^1.0.1",
-                "maximebf/debugbar": "~1.11",
-                "micheh/psr7-cache": "^0.5.0",
-                "mikey179/vfsstream": "^1.6",
-                "mobiledetect/mobiledetectlib": "^2.8",
-                "monolog/monolog": "^1.17",
-                "mrclay/minify": "^2.2",
-                "neomerx/cors-psr7": "^1.0",
-                "nikic/fast-route": "^0.7",
-                "paragonie/csp-builder": "^1.3",
-                "phpunit/phpunit": ">=4.8",
-                "piwik/referrer-spam-blacklist": "^1.0",
-                "ramsey/uuid": "^3.1",
-                "relay/relay": "1.*",
-                "willdurand/geocoder": "^3.2",
-                "willdurand/negotiation": "~2.0",
-                "zendframework/zend-diactoros": "1.*"
-            },
-            "suggest": {
-                "aura/router": "To use AuraRouter",
-                "aura/session": "To use AuraSession",
-                "filp/whoops": "To use Whoops",
-                "google/recaptcha": "To use Recaptcha",
-                "imagecow/imagecow": "To use ImageTransformer",
-                "justinrainbow/json-schema": "To validate JSON with route-matched schemas.",
-                "league/route": "To use LeagueRoute",
-                "m6web/firewall": "To use Firewall",
-                "maximebf/debugbar": "To use DebugBar",
-                "micheh/psr7-cache": "To use Cache",
-                "mobiledetect/mobiledetectlib": "To use DetectDevice",
-                "mrclay/minify": "To use Minify",
-                "neomerx/cors-psr7": "To use Cors",
-                "nikic/fast-route": "To use FastRoute",
-                "paragonie/csp-builder": "To use Csp",
-                "piwik/referrer-spam-blacklist": "To use BlockSpam",
-                "psr/cache-implementation": "To use Cache",
-                "psr/log-implementation": "To use AccessLog",
-                "ramsey/uuid": "To use Uuid",
-                "willdurand/geocoder": "To use Geolocate",
-                "willdurand/negotiation": "To use FormatNegotiator, LanguageNegotiator and EncodingNegotiator"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Psr7Middlewares\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oscar Otero",
-                    "email": "oom@oscarotero.com",
-                    "homepage": "http://oscarotero.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Collection of HTTP middlewares compatible with PSR-7",
-            "homepage": "https://github.com/oscarotero/psr7-middlewares",
-            "keywords": [
-                "http",
-                "middlewares",
-                "psr-7",
-                "psr-messages"
-            ],
-            "abandoned": "middlewares/*",
-            "time": "2017-09-28T21:21:24+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -668,6 +669,58 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/http-factory",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "378bfe27931ecc54ff824a20d6f6bfc303bbd04c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/378bfe27931ecc54ff824a20d6f6bfc303bbd04c",
+                "reference": "378bfe27931ecc54ff824a20d6f6bfc303bbd04c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2018-07-30T21:54:04+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -716,6 +769,112 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "aff2f80e33b7f026ec96bb42f63242dc50ffcae7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/aff2f80e33b7f026ec96bb42f63242dc50ffcae7",
+                "reference": "aff2f80e33b7f026ec96bb42f63242dc50ffcae7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "time": "2018-10-30T16:46:14+00:00"
+        },
+        {
+            "name": "psr/http-server-middleware",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "2296f45510945530b9dceb8bcedb5cb84d40c5f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/2296f45510945530b9dceb8bcedb5cb84d40c5f5",
+                "reference": "2296f45510945530b9dceb8bcedb5cb84d40c5f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2018-10-30T17:12:04+00:00"
         },
         {
             "name": "psr/simple-cache",
