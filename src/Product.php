@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp;
+namespace JampApp;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -15,7 +15,7 @@ class Product extends Model
     ];
 
     public function stores() {
-        return $this->hasMany('JumpApp\StoreProduct');
+        return $this->hasMany('JampApp\StoreProduct');
     }
 
 }

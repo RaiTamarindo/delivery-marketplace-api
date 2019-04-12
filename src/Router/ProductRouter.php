@@ -1,10 +1,10 @@
 <?php
 
-namespace JumpApp\Router;
+namespace JampApp\Router;
 
 use \Slim\App;
 
-use JumpApp\Controller\ProductController;
+use JampApp\Controller\ProductController;
 
 /**
  * Product routes

@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp\Middleware;
+namespace JampApp\Middleware;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -8,7 +8,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Respect\Validation\Rules;
 use Respect\Validation\Exceptions\NestedValidationException;
 
-use JumpApp\ApiException;
+use JampApp\ApiException;
 
 abstract class ValidatorMiddleware {
 

@@ -1,5 +1,5 @@
 {
-    "name": "jumpapp/delivery-marketplace-api",
+    "name": "jampapp/delivery-marketplace-api",
     "type": "project",
     "description": "Delivery Marketplace API",
     "keywords": [
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JumpApp\\": "src/"
+            "JampApp\\": "src/"
         },
         "classmap": [
             "database/seeds",

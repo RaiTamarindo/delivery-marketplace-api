@@ -1,10 +1,10 @@
 <?php
 
-namespace JumpApp\Router;
+namespace JampApp\Router;
 
 use \Slim\App;
 
-use JumpApp\Controller\AddressController;
+use JampApp\Controller\AddressController;
 
 /**
  * Address routes

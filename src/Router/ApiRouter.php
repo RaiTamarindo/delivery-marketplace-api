@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp\Router;
+namespace JampApp\Router;
 
 use \Slim\App;
 

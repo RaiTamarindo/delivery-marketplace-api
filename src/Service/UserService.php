@@ -1,9 +1,9 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\ApiException;
-use JumpApp\User;
+use JampApp\ApiException;
+use JampApp\User;
 
 class UserService extends ResourceService {
 

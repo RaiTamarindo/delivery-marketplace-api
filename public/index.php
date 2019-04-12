@@ -9,8 +9,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 use \Middlewares\Utils\Dispatcher;
 use \Middlewares\TrailingSlash;
 
-use JumpApp\Router\ApiRouter;
-use JumpApp\ApiException;
+use JampApp\Router\ApiRouter;
+use JampApp\ApiException;
 
 $container = new Container([
     'settings' => [

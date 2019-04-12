@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp;
+namespace JampApp;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,11 +12,11 @@ class Address extends Model
     ];
 
     public function user() {
-        return $this->belongsTo('JumpApp\User');
+        return $this->belongsTo('JampApp\User');
     }
 
     public function routes() {
-        return $this->hasMany('JumpApp\Route');
+        return $this->hasMany('JampApp\Route');
     }
 
 }

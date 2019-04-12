@@ -1,8 +1,8 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\Address;
+use JampApp\Address;
 
 class AddressService extends ResourceService {
 

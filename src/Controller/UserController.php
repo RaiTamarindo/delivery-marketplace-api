@@ -1,11 +1,11 @@
 <?php
 
-namespace JumpApp\Controller;
+namespace JampApp\Controller;
 
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-use JumpApp\Service\UserService;
+use JampApp\Service\UserService;
 
 class UserController extends ResourceController {
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\ApiException;
-use JumpApp\StoreProduct;
-use JumpApp\Store;
-use JumpApp\Product;
+use JampApp\ApiException;
+use JampApp\StoreProduct;
+use JampApp\Store;
+use JampApp\Product;
 
 class StoreProductService extends ResourceService {
 

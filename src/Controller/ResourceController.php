@@ -1,12 +1,12 @@
 <?php
 
-namespace JumpApp\Controller;
+namespace JampApp\Controller;
 
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-use JumpApp\ApiException;
-use JumpApp\Service\ResourceService;
+use JampApp\ApiException;
+use JampApp\Service\ResourceService;
 
 abstract class ResourceController {
 

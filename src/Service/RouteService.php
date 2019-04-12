@@ -1,10 +1,10 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\Route;
-use JumpApp\Address;
-use JumpApp\Store;
+use JampApp\Route;
+use JampApp\Address;
+use JampApp\Store;
 
 class RouteService extends ResourceService {
 

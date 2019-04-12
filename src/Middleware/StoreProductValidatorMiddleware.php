@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp\Middleware;
+namespace JampApp\Middleware;
 
 use Respect\Validation\Rules;
 

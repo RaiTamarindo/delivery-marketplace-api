@@ -1,8 +1,8 @@
 <?php
 
-namespace JumpApp\Controller;
+namespace JampApp\Controller;
 
-use JumpApp\Service\AddressService;
+use JampApp\Service\AddressService;
 
 class AddressController extends ResourceController {
 

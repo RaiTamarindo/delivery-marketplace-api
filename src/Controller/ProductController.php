@@ -1,8 +1,8 @@
 <?php
 
-namespace JumpApp\Controller;
+namespace JampApp\Controller;
 
-use JumpApp\Service\ProductService;
+use JampApp\Service\ProductService;
 
 class ProductController extends ResourceController {
 

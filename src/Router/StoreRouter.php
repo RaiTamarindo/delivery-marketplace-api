@@ -1,11 +1,11 @@
 <?php
 
-namespace JumpApp\Router;
+namespace JampApp\Router;
 
 use \Slim\App;
 
-use JumpApp\Controller\StoreController;
-use JumpApp\Middleware\StoreValidatorMiddleware;
+use JampApp\Controller\StoreController;
+use JampApp\Middleware\StoreValidatorMiddleware;
 
 /**
  * Store routes

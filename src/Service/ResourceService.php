@@ -1,8 +1,8 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\ApiException;
+use JampApp\ApiException;
 
 abstract class ResourceService {
     

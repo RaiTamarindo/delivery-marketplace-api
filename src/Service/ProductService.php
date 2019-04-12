@@ -1,8 +1,8 @@
 <?php
 
-namespace JumpApp\Service;
+namespace JampApp\Service;
 
-use JumpApp\Product;
+use JampApp\Product;
 
 class ProductService extends ResourceService {
 

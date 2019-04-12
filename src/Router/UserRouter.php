@@ -1,11 +1,11 @@
 <?php
 
-namespace JumpApp\Router;
+namespace JampApp\Router;
 
 use \Slim\App;
 
-use JumpApp\Controller\UserController;
-use JumpApp\Middleware\UserValidatorMiddleware;
+use JampApp\Controller\UserController;
+use JampApp\Middleware\UserValidatorMiddleware;
 
 /**
  * User routes

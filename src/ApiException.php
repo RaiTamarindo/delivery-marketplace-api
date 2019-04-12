@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpApp;
+namespace JampApp;
 
 class ApiException extends \Exception {
 
