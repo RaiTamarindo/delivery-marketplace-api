@@ -23,7 +23,7 @@ There is other linking table between *products* and *stores* that keeps price an
  - [x] Services
  - [x] Controllers
  - [x] Routers
- - [ ] Data validation middlewares
+ - [x] Data validation middlewares
  - [ ] Authentication middleware
  - [ ] User constraints
  - [x] Custom product search endpoint
