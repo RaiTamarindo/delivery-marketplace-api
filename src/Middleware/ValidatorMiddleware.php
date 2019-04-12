@@ -22,7 +22,7 @@ abstract class ValidatorMiddleware {
         }
     }
 
-    protected abstract function getRules(): Rules\AllOf;
+    protected abstract function getRules(): Rules\KeySet;
 
 }
 
