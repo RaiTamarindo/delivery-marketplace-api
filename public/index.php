@@ -26,7 +26,7 @@ $container['notFoundHandler'] = function($c) {
 };
 $container['errorHandler'] = function($c) {
     return function(Request $req, Response $res, Exception $exception) use ($c) {
-        $status = $exception instanceof APIException ? $exception->getStatus() : 500;
+        $status = $exception instanceof ApiException ? $exception->getStatus() : 500;
         return $res
             ->withStatus($status)
             ->withJson(['error' => $exception->getMessage()]);
