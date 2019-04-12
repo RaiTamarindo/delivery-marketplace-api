@@ -1,6 +1,6 @@
 # Delivery Marketplace API
 
-An API that handles with stores, products and routes to deliver to the clients.
+An API that handles stores, products and routes to deliver to the clients.
 
 ## About
 
