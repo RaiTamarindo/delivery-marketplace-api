@@ -8,10 +8,12 @@ abstract class ResourceRouter implements IRouter {
 
     private $base_route;
     private $controller;
+    private $validator;
 
-    public function __construct($base_route, $controller) {
+    public function __construct($base_route, $controller, $validator = null) {
         $this->base_route = $base_route;
         $this->controller = $controller;
+        $this->validator = $validator;
     }
 
     public function apply(App $app) {
@@ -19,10 +21,14 @@ abstract class ResourceRouter implements IRouter {
         $app->group('/' . $this->base_route, function(App $app) use ($_this) {
             $app->get('/{id}', $_this->controller . ':get');
             $app->get('', $_this->controller . ':find');
-            $app->post('', $_this->controller . ':create');
-            $app->put('/{id}', $_this->controller . ':update');
+            $createRoute = $app->post('', $_this->controller . ':create');
+            $updateRoute = $app->put('/{id}', $_this->controller . ':update');
             $app->delete('/{id}', $_this->controller . ':remove');
             $_this->extraRoutes($app);
+            if ($_this->validator) {
+                $createRoute->add($_this->validator);
+                $updateRoute->add($_this->validator);
+            }
         });
     }
 
